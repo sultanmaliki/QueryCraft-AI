@@ -942,6 +942,9 @@ MIT License. See [LICENSE](LICENSE) file for details.
 
 **Repository**: [github.com/sultanmaliki/QueryCraft-AI](https://github.com/sultanmaliki/QueryCraft-AI)
 
-**Author**: Syed Mohammed Sultan
+**Authors**:
+- Syed Mohammed Sultan
+- Rifaque Ahmed Akrami
+- Raif
 
 **Project Status**: Completed
