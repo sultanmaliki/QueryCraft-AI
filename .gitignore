@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Backend specific
+querycraft-backend/.env
+querycraft-backend/node_modules/
+querycraft-backend/dist/
+
+# Frontend specific
+querycraft-frontend/node_modules/
+querycraft-frontend/.next/
+querycraft-frontend/out/
+querycraft-frontend/.env.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+db_files.json
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+Thumbs.db
+.DS_Store
+.env.*.swp
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache directories
+.cache/
+.eslintcache
+.turbo/
+
+# Misc
+.prettierignore
+.venv
+venv/
+ENV/

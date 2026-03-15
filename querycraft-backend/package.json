@@ -1,0 +1,42 @@
+{
+  "name": "querycraft-backend",
+  "version": "0.1.0",
+  "description": "QueryCraft backend - Node + Express + MongoDB (no TypeScript)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon index.js",
+    "start": "PORT=5001 NODE_ENV=production node index.js"
+  },
+  "keywords": [],
+  "author": "Syed Mohammed Sultan",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "axios": "^1.5.0",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "jsonfile": "^6.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.21.0",
+    "mongoose": "^7.5.1",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.15.3",
+    "neo4j-driver": "^6.0.1",
+    "pg": "^8.16.3",
+    "response": "^0.18.0",
+    "response-time": "^2.3.4",
+    "tmp": "^0.2.5",
+    "uuid": "^13.0.0",
+    "xss": "^1.0.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

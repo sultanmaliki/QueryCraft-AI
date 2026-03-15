@@ -1,0 +1,150 @@
+/* app/globals.css (or ./styles/globals.css) */
+/* Tailwind import kept if you still want utility classes */
+@import "tailwindcss";
+
+/* FULL DARK MODE — no CSS variables, direct hex & rgba values */
+
+/* ---------- Aurora gradient system ---------- */
+/* Use these classes to get a consistent dark 'Aurora' look */
+
+/* primary aurora background for app/container */
+.bg-aurora {
+  background: linear-gradient(135deg,
+    #020817 0%,
+    #071129 25%,
+    #0b1f2b 50%,
+    #081126 75%,
+    #020817 100%);
+  color: #f8fafc; /* near-white primary text */
+}
+
+/* subtle glassy card using aurora overlay */
+.card-aurora {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%),
+    linear-gradient(135deg, rgba(14,165,233,0.06), rgba(139,92,246,0.03));
+  color: #f8fafc;
+  border: 1px solid #1e293b; /* slate/blue-gray border */
+  border-radius: 0.75rem;
+  backdrop-filter: blur(6px);
+}
+
+/* popovers / overlays */
+.popover-aurora {
+  background: #020817;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  box-shadow: 0 6px 18px rgba(2,8,23,0.6);
+}
+
+/* primary light-on-dark button / pill */
+.btn-aurora-primary {
+  background: #f8fafc;           /* light on dark */
+  color: #0f172a;               /* dark-on-primary */
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(15,23,42,0.06);
+  font-weight: 500;
+}
+
+/* secondary / muted elements */
+.muted-aurora {
+  color: #94a3b8; /* muted text */
+}
+
+/* destructive */
+.destructive-aurora {
+  background: #7f1d1d;
+  color: #f8fafc;
+}
+
+/* inputs / borders */
+.input-aurora {
+  background: rgba(255,255,255,0.02);
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+}
+
+/* sidebar look */
+.sidebar-aurora {
+  background: linear-gradient(180deg, rgba(2,8,23,0.95), rgba(2,8,23,0.98));
+  color: #f8fafc;
+  border-right: 1px solid rgba(14,165,233,0.15);
+}
+
+/* accent / small glow accent bars */
+.accent-aurora {
+  background: linear-gradient(90deg, rgba(14,165,233,1) 0%, rgba(139,92,246,1) 100%);
+  height: 4px;
+  border-radius: 6px;
+}
+
+/* chart palette (named classes contain direct hex) */
+.chart-1 { background: #0ea5e9; } /* bright cyan */
+.chart-2 { background: #3b82f6; } /* blue */
+.chart-3 { background: #06b6d4; } /* teal */
+.chart-4 { background: #8b5cf6; } /* purple */
+.chart-5 { background: #10b981; } /* green */
+
+/* code block styling (monospace) */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Noto Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  tab-size: 2;
+  -webkit-font-smoothing: antialiased;
+  color: #c9d1d9; /* slightly desaturated white */
+  background: transparent;
+}
+
+/* Prism tokens */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata { color: #6a737d; }
+
+.token.keyword,
+.token.boolean,
+.token.constant,
+.token.deleted,
+.token.selector,
+.token.tag { color: #ff7b72; }
+
+.token.function,
+.token.class-name { color: #d2a8ff; }
+
+.token.string,
+.token.attr-value,
+.token.regex,
+.token.variable { color: #a5d6a7; }
+
+/* scrollbar for code blocks */
+pre::-webkit-scrollbar { height: 8px; }
+pre::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+}
+
+/* Base layer that uses aurora as root look */
+@layer base {
+  * {
+    border-color: #1e293b; /* resolved border color */
+  }
+
+  html, body, #__next, #root {
+    height: 100%;
+  }
+
+  body {
+    background: linear-gradient(135deg, #020817 0%, #071129 25%, #0b1f2b 50%);
+    color: #f8fafc;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* if you used .dark rules before, remove them; root is dark */
+}
