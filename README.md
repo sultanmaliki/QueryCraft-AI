@@ -40,41 +40,41 @@ The project consists of a **Node.js/Express backend** that handles LLM orchestra
 ## Architecture / System Design
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    Next.js Frontend                          │
-│  (React 19, TypeScript, Tailwind CSS, Framer Motion)        │
-│  ┌──────────────┬──────────────┬──────────────────────┐     │
-│  │ AuthPage     │ IntroPage    │ ChatApp              │     │
-│  │ (Login/Reg)  │ (Landing)    │ (Main Interface)     │     │
-│  └──────────────┴──────────────┴──────────────────────┘     │
-└─────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────┐
+│                    Next.js Frontend                        │
+│  (React 19, TypeScript, Tailwind CSS, Framer Motion)       │
+│  ┌──────────────┬──────────────┬──────────────────────┐    │
+│  │ AuthPage     │ IntroPage    │ ChatApp              │    │
+│  │ (Login/Reg)  │ (Landing)    │ (Main Interface)     │    │
+│  └──────────────┴──────────────┴──────────────────────┘    │
+└────────────────────────────────────────────────────────────┘
                              ↕ HTTP/REST
-┌─────────────────────────────────────────────────────────────┐
-│                  Express Backend (Node.js)                   │
-│                                                              │
+┌────────────────────────────────────────────────────────────┐
+│                  Express Backend (Node.js)                 │
+│                                                            │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │                   Routes Layer                       │   │
+│  │                   Routes Layer                      │   │
 │  │  /api/auth  │  /api/query  │  /api/chat  │ /api/db  │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                          ↓                                   │
+│                          ↓                                 │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │              Controllers / Middleware                │   │
+│  │              Controllers / Middleware               │   │
 │  │  • JWT Authentication       • Rate Limiting         │   │
 │  │  • Query Language Detection • Response Parsing      │   │
 │  │  • Database Query Execution                         │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                          ↓                                   │
+│                          ↓                                 │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │             LLM Orchestration                        │   │
-│  │  • Model Selection Logic (qwen/mistral/llama/...)  │   │
+│  │             LLM Orchestration                       │   │
+│  │  • Model Selection Logic (qwen/mistral/llama/...)   │   │
 │  │  • OpenRouter API Integration                       │   │
 │  │  • Google GenAI / Gemini Support                    │   │
 │  │  • Local LLM Endpoint (Ollama)                      │   │
 │  │  • Retry Logic & Error Handling                     │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                          ↓                                   │
+│                          ↓                                 │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │           Multi-Database Layer                       │   │
+│  │           Multi-Database Layer                      │   │
 │  │  ┌──────────────────────────────────────────────┐   │   │
 │  │  │ SQL: SQLite │ PostgreSQL │ MySQL             │   │   │
 │  │  ├──────────────────────────────────────────────┤   │   │
@@ -83,17 +83,17 @@ The project consists of a **Node.js/Express backend** that handles LLM orchestra
 │  │  │ Search: Elasticsearch │ DynamoDB             │   │   │
 │  │  └──────────────────────────────────────────────┘   │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                          ↓                                   │
+│                          ↓                                 │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │              Data Models (MongoDB)                   │   │
+│  │              Data Models (MongoDB)                  │   │
 │  │  • User    • Chat    • Query                        │   │
 │  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────┘
                              ↕
-┌─────────────────────────────────────────────────────────────┐
-│                    MongoDB Database                          │
-│    Stores: Users, Conversations, Query History, Metadata    │
-└─────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────┐
+│                    MongoDB Database                        │
+│    Stores: Users, Conversations, Query History, Metadata   │
+└────────────────────────────────────────────────────────────┘
 ```
 
 ### Request Flow
