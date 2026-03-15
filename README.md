@@ -305,7 +305,6 @@ Create a `.env` file in `querycraft-backend/`:
 ```bash
 # MongoDB Connection (required)
 MONGO_URI=mongodb://localhost:27017/querycraft
-# or cloud: mongodb+srv://user:pass@cluster.mongodb.net/querycraft
 
 # Server Configuration
 PORT=5001
