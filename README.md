@@ -1,7 +1,7 @@
 # QueryCraft AI
 
 An intelligent, AI-powered database query assistant that transforms natural language into optimized database queries. QueryCraft leverages large language models (LLMs) to understand user intent and generate queries across multiple database systems.
-
+![QueryCraft Homepage](https://syedmohammedsultan.online/assets/QueryCraft-uGgk6l1y.png)
 ## Overview
 
 QueryCraft solves the problem of non-technical users struggling to write complex database queries. By accepting natural language input, the system:
